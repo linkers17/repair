@@ -11,7 +11,10 @@ $(function(){
          type: 'POST',
          data: $(this).serialize(),
          success: function(data) {
-            $('.success').text(data + ', Ваша форма отправлена.');
+            $('.success').fadeIn(2000);
+            $('.success').text('Спасибо за заявку, скоро мы Вам перезвоним.');
+            $('.success').fadeOut(7000);
+            $(`#offer-form-js input`).val('');
          },
          error: function(jqXHR, textStatus) {
             console.log(jqXHR + ': ' + textStatus);
