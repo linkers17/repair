@@ -13,6 +13,7 @@ img
    &-title
       font-size: 24px
       +bold
+      text-align: center
 
    &-subtitle
       font-size: 16px
@@ -58,6 +59,13 @@ img
    border: 1px solid $success-border
    border-radius: 10px
    padding: 15px
+   display: none
+
+.arrows
+
+   &__left, &__right
+      &:hover
+         cursor: pointer
 
 @media (max-width: 1200px)
    .container
