@@ -2,6 +2,49 @@ new WOW().init();
 
 $(function(){
 
+   /* Валидация форм */
+
+   $('#brif-form-js').validate({
+
+      rules: {
+
+         username: {
+           required: true,
+           minlength: 2,
+           maxlength: 15
+         },
+         email: {
+            required: true,
+            email: true
+         },
+         phone: 'required'
+
+      },
+      messages: {
+
+         username: {
+
+            required: "Заполните поле",
+            minlength: jQuery.validator.format("Минимум {0} символа"),
+            maxlength: jQuery.validator.format("Максимум {0} символов")
+
+         },
+         email: {
+
+            required: "Заполните поле",
+            email: jQuery.validator.format("Введите корректный email")
+
+         },
+         phone: "Заполните поле"
+
+      }
+
+   });
+
+   /* Маска ввода для телефона */
+
+   $('.phone').mask('8 (999) 999-99-99');
+
    /* Обработка и отправка формы через AJAX */
 
    $('#offer-form-js').on('submit', function(event) {

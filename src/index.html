@@ -264,9 +264,10 @@
                <div class="form brif__form">
                   <h3 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h3>
                   <span class="form__subtitle">Для этого заполните форму ниже</span>
-                  <form action="#">
-                     <input type="text" class="input brif__input" placeholder="Ваше имя">
-                     <input type="tel" class="input brif__input" placeholder="Ваш телефон">
+                  <form id="brif-form-js" action="#">
+                     <input type="text" name="username" class="input brif__input" placeholder="Ваше имя">
+                     <input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
+                     <input type="email" name="email" class="input brif__input" placeholder="Ваш email">
                      <button class="button brif__button">Узнать стоимость</button>
                      <span class="form__description">Мы перезвоним в течение 60 секунд</span>
                   </form>
@@ -344,7 +345,7 @@
          <div class="modal-column">
             <h3 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h3>
             <span class="form__subtitle">Для этого заполните форму ниже</span>
-            <form action="#" id="brif-form">
+            <form id="brif-form" action="#">
                <input type="text" name="" class="input brif__input" placeholder="Ваше имя">
                <input type="tel" name="" class="input brif__input" placeholder="Ваш телефон">
                <input type="email" name="" class="input brif__input" placeholder="Ваш email">
@@ -363,6 +364,8 @@
    <script src="js/top.js"></script>
    <script src="js/animate.js"></script>
    <script src="js/wow.min.js"></script>
+   <script src="js/jquery.validate.min.js"></script>
+   <script src="js/jquery.maskedinput.min.js"></script>
    <script src="js/scripts.js"></script>
 
 </body>
