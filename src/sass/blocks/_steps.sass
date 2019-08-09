@@ -2,19 +2,7 @@
    position: relative
    flex-basis: 20%
    text-align: center
-   animation: slide 2s
-
-   &:nth-child(2)
-      animation-delay: 0.2s
-
-   &:nth-child(3)
-      animation-delay: 0.4s
-
-   &:nth-child(4)
-      animation-delay: 0.6s
-
-   &:last-child
-      animation-delay: 0.8s
+   transform: translateY(100%)
 
    &:after
       content: ''
@@ -59,13 +47,30 @@
       &-block
          display: flex
 
+.animate
+   animation: slide 2s both
+
+   &:nth-child(2)
+      animation-delay: 0.2s
+
+   &:nth-child(3)
+      animation-delay: 0.4s
+
+   &:nth-child(4)
+      animation-delay: 0.6s
+
+   &:last-child
+      animation-delay: 0.8s
+
 @keyframes slide
    0%
-      transform: translate3d(0, 100%, 0)
+      transform: translateY(100%)
       visibility: visible
+      opacity: 0
 
    100%
-      transform: translate3d(0, 0, 0)
+      transform: translateY(0)
+      opacity: 1
 
 @media (max-width: 1200px)
    .step
