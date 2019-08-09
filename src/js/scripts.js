@@ -37,7 +37,38 @@ $(function(){
          },
          phone: "Заполните поле"
 
-      }
+      },
+      errorElement: "div",
+      errorClass: "invalid"
+
+   });
+
+   $('#offer-form-js').validate({
+
+      rules: {
+
+         username: {
+           required: true,
+           minlength: 2,
+           maxlength: 15
+         },
+         userphone: 'required'
+
+      },
+      messages: {
+
+         username: {
+
+            required: "Заполните поле",
+            minlength: jQuery.validator.format("Минимум {0} символа"),
+            maxlength: jQuery.validator.format("Максимум {0} символов")
+
+         },
+         userphone: "Заполните поле"
+
+      },
+      errorElement: "div",
+      errorClass: "invalid"
 
    });
 
