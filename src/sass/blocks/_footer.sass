@@ -1,0 +1,73 @@
+.footer
+   position: relative
+   
+.map
+   position: absolute
+   left: 0
+   top: 0
+   width: 50%
+
+.contacts
+   flex-basis: 50%
+   padding-top: 100px
+   padding-left: 200px
+
+   &__title
+      +bold
+      font-size: 22px
+      line-height: 1.4
+      margin-bottom: 100px
+
+   &-block
+      display: flex
+      justify-content: flex-end
+
+   &-list
+      padding: 0
+      list-style: none
+
+      &__item
+         display: flex
+         align-items: flex-start
+         margin-bottom: 29px
+
+      &__icon
+         width: 20px
+         height: 20px
+         line-height: 20px
+         margin-right: 23px
+
+      &__text
+         max-width: 150px
+         line-height: 26px
+
+      &__text_bold
+         +bold
+         text-decoration: none
+         color: #000
+
+@media (max-width: 992px)
+   .contacts
+      padding-left: 100px
+
+@media (max-width: 768px)
+   .footer
+      display: flex
+      flex-wrap: wrap
+
+   .map
+      order: 2
+      flex-basis: 100%
+      position: relative
+
+   .contacts
+      padding: 0
+
+      &-block
+         flex-basis: 100%
+         order: 1
+         justify-content: flex-start
+
+      &__title
+         font-size: 18px
+         margin-bottom: 39px
