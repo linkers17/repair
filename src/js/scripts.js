@@ -121,4 +121,25 @@ $(function(){
       ]
    });
 
+   // Подключение яндекс карты
+
+   ymaps.ready(init);
+   function init(){ 
+      // Создание карты.    
+      var myMap = new ymaps.Map("map", {
+         center: [55.61140907, 37.20112250],
+         zoom: 12
+      });
+
+      myMap.geoObjects
+         .add(new ymaps.Placemark([55.61140907, 37.20112250], {
+
+            balloonContent: 'Мы находимся здесь',
+            iconCaption: 'Москва, ул. Ленина, д. 10'
+
+         }))
+
+      myMap.behaviors.disable('scrollZoom');
+   }
+
 });
