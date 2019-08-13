@@ -134,8 +134,8 @@ $(function(){
       myMap.geoObjects
          .add(new ymaps.Placemark([55.61140907, 37.20112250], {
 
-            balloonContent: 'Мы находимся здесь',
-            iconCaption: 'Москва, ул. Ленина, д. 10'
+            balloonContent: 'Ремонт квартир',
+            iconCaption: 'Россия, Москва, посёлок Толстопальцево, улица Ленина, 10'
 
          }))
 
