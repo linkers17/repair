@@ -1,0 +1,53 @@
+.purchases
+
+   &-block
+      display: flex
+      justify-content: space-between
+
+   &__card
+      position: relative
+      background: $secondary url('../img/purchases/figure-bg.png') no-repeat center bottom
+      background-size: contain
+      height: 410px
+      width: 370px
+
+   &__text
+      display: block
+      max-width: 288px
+      margin: 27px 0 63px 27px
+      line-height: 23px
+
+      &_bold
+         +bold
+
+   &__img
+      position: absolute
+      right: 0
+      bottom: 0
+
+@media (max-width: 1200px)
+   .purchases
+
+      &__card
+         height: 275px
+         width: 248px
+
+      &__text
+         margin: 15px 0 45px 19px
+         line-height: 16.83px
+         max-width: 215px
+         font-size: 15px
+
+@media (max-width: 768px)
+   .purchases
+      &-block
+         flex-direction: column
+         flex-wrap: wrap
+
+      &__card
+         width: 272px
+         height: 300px
+         margin: 0 auto 30px
+
+      &__text
+         font-size: 12px
